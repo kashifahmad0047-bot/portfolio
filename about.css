@@ -1,0 +1,185 @@
+.about-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #0ff;  /* Updated for gradient theme */
+  position: relative;
+}
+
+/* ====== Updated about-content for image + text layout ====== */
+.about-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+  text-align: left;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 15px; /* ✅ Keep original shape */
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* ✅ Smooth animation */
+  box-shadow: 5px 5px 150px rgba(153, 25, 25, 0.3); /* ✅ Light green glow */
+}
+
+/* Hover zoom + stronger glow */
+.about-image img:hover {
+  transform: scale(1.05); /* ✅ Subtle zoom */
+  box-shadow: 0 0 40px rgba(153, 15, 15, 0.5); /* ✅ Glow thoda zyada on hover */
+}
+
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  font-size: 1.1rem;
+  color: #eee;
+  line-height: 1.7;
+  text-align: right;
+}
+
+.about-text strong,
+.about-text u {
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff;
+}
+
+/* .education-cards {
+  display: none !important;
+} */
+
+
+/* Education cards - keep your existing style */
+.education-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* center se flex-start */
+  gap: 30px;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1000px; /* same width limit for cards */
+  margin-left: 0;
+  margin-right: auto;
+  margin-top: 60px; /* 🔥 added space below image/text section */
+}
+
+.edu-card {
+  background: rgba(15, 15, 30, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 40px 20px 30px;
+  width: 280px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.edu-icon {
+  font-size: 3rem;
+  color: #0ff;
+  margin-bottom: 15px;
+  transition: color 0.4s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.edu-card h4,
+.edu-card p {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.edu-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5), 0 0 40px rgba(0, 255, 255, 0.3);
+}
+
+.edu-card:hover h4,
+.edu-card:hover p {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.edu-card:hover .edu-icon {
+  color: #0ff;
+  text-shadow: 0 0 8px #0ff;
+}
+
+.edu-card h4 {
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.edu-card p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-image {
+    max-width: 100%;
+  }
+
+  .education-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .edu-card {
+    width: 90%;
+  }
+}
+
+
+
+.container {
+  max-width: 1200px;
+  margin-left: 40px; /* pura container thoda left se start ho */
+  margin-right: auto;
+}

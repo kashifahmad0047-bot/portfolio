@@ -1,0 +1,87 @@
+.custom-navbar {
+background: linear-gradient(135deg, #1f1c2c, #928dab);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  padding: 1.4rem 2rem; /* ⬅️ Increased padding */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: all 0.3s ease;
+  border-radius: 0 0 12px 12px;
+}
+
+
+/* Logo */
+.logo {
+  font-weight: 800;
+  font-size: 1.9rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+}
+
+/* Nav Links */
+.nav-link {
+  position: relative;
+  color: #ddd;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  transition: all 0.4s ease;
+  transform-style: preserve-3d;
+}
+
+/* Glow Hover Effect */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #0ff, #0d6efd);
+  bottom: -6px;
+  left: 0;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Text Glow on Hover */
+.nav-link:hover {
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0d6efd;
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Icon styling inside nav */
+.nav-link i {
+  margin-right: 6px;
+  color: #0d6efd;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover i {
+  color: #0ff;
+}
+
+/* Responsive Dropdown Menu */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: rgba(20, 20, 30, 0.9);
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .nav-link {
+    display: block;
+    margin: 0.7rem 0;
+    text-align: center;
+  }
+}

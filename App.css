@@ -1,0 +1,48 @@
+/* App.css */
+
+/* Light mode defaults */
+body,
+.app {
+  background-color: #ffffff;
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Dark mode styles */
+.app.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* Add overrides for specific elements if needed */
+.app.dark a {
+  color: #90caf9;
+}
+
+.app.dark input,
+.app.dark textarea {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  border: 1px solid #444;
+}
+
+.app.dark .footer,
+.app.dark .contact-section,
+.app.dark .hero-section,
+.app.dark .about-section,
+.app.dark .skills-section,
+.app.dark .projects-section {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+.app.dark .btn-primary {
+  background-color: #333;
+  border-color: #444;
+  color: #fff;
+}
+
+.app.dark .btn-primary:hover {
+  background-color: #444;
+  border-color: #555;
+}

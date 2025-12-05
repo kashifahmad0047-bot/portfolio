@@ -1,0 +1,125 @@
+.footer {
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: #fff;
+  padding: 25px 15px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* rest of your CSS remains unchanged */
+
+
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 25px; /* Less gap */
+  text-align: center;
+}
+
+.footer-left,
+.footer-center {
+  flex: 1;
+  min-width: 220px; /* Slightly smaller */
+}
+
+.footer-left img {
+  width: 70px; /* Smaller image */
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-bottom: 8px;
+}
+
+.footer-left h4 {
+  margin: 8px 0 4px;
+  font-size: 1.2rem; /* Smaller font */
+  font-weight: bold;
+}
+
+.footer-left p,
+.footer-center p {
+  font-size: 0.85rem; /* Slightly smaller */
+  margin: 4px 0;
+}
+
+.footer-left a,
+.footer-center a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-left i,
+.footer-center i {
+  margin-right: 5px;
+  color: #ffd700;
+}
+
+.footer-center h5 {
+  font-size: 1rem; /* Smaller heading */
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 16px; /* Tighter gap */
+  margin-top: 10px;
+  font-size: 1.6rem; /* Slightly smaller icons */
+}
+
+.footer-social a {
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #ffd700;
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  margin-top: 25px; /* Less top margin */
+  text-align: center;
+  position: relative;
+  font-size: 0.85rem; /* Smaller text */
+}
+
+.footer-actions {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.scroll-top-btn,
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.6rem; /* Smaller buttons */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.scroll-top-btn:hover,
+.toggle-btn:hover {
+  transform: scale(1.2);
+  color: #ffd700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-actions {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 15px;
+  }
+}
